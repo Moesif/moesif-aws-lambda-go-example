@@ -16,12 +16,12 @@
   version = "v1.13.3"
 
 [[projects]]
-  branch = "master"
-  digest = "1:e9484b2cce234a0c20ebaca4a025b762515851ae6e1bca895ab2b4653738f8d7"
+  digest = "1:7d75978be853c0f9b1e1a640e6fb3e96011f3a756db552baef1534de4b50c61e"
   name = "github.com/moesif/moesif-aws-lambda-go"
   packages = ["."]
   pruneopts = "UT"
-  revision = "136dfa2fd3c6fdd5039fb8db95862c0b8bd6b413"
+  revision = "a80ba7eb1ebd7fedd94b8147d675305f106fe623"
+  version = "v1.0.1"
 
 [[projects]]
   digest = "1:9f870f2e8d1ed5690703df16c9608516dba226ecb5c808d58a0db46a6a7b5059"
