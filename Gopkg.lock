@@ -2,7 +2,7 @@
 
 
 [[projects]]
-  digest = "1:c8bc6cc8a13405a9ebfdc76a4279d52ff3e13dd4f73766b7a1ff6b45aa609fc3"
+  digest = "1:9f35366f9320824eab04f789b106ffe305ad4c44b1c3448631696990086704e5"
   name = "github.com/aws/aws-lambda-go"
   packages = [
     "events",
@@ -12,16 +12,16 @@
     "lambdacontext",
   ]
   pruneopts = "UT"
-  revision = "b5b7267d297de263cc5b61f8c37543daa9c95ffd"
-  version = "v1.13.3"
+  revision = "b03d958110de656174675d8f88049be607e57b0f"
+  version = "v1.14.0"
 
 [[projects]]
-  digest = "1:e6fba57b8b51ec35dea0f54bd17a76bdb1df23be3fbec1d1acc6fd0aa1823c1d"
+  digest = "1:c4c782ef0de59b509ae5b68ce9e6b2ef39a13b638d17cc6a2ce5a47db5f4d463"
   name = "github.com/moesif/moesif-aws-lambda-go"
   packages = ["."]
   pruneopts = "UT"
-  revision = "d0e9d2b9c0018dd97cd04d249739401ff7fed8fd"
-  version = "v1.0.2"
+  revision = "022a26dc4d00a1ef6c06e7b41cd72bc7249a543a"
+  version = "v1.0.3"
 
 [[projects]]
   digest = "1:9f870f2e8d1ed5690703df16c9608516dba226ecb5c808d58a0db46a6a7b5059"
