@@ -15,12 +15,12 @@ func maskEventModel(eventModel models.EventModel) models.EventModel {
 
 // Set User Id
 func identifyUser(request events.APIGatewayV2HTTPRequest, response events.APIGatewayV2HTTPResponse) string {
-	return "golangapiuser"
+	return "golangapiuserV2"
 }
 
 // Set Company Id
 func identifyCompany(request events.APIGatewayV2HTTPRequest, response events.APIGatewayV2HTTPResponse) string {
-	return "golangapicompany"
+	return "golangapicompanyV2"
 }
 
 // Set Session Token
@@ -46,7 +46,7 @@ func getMetadata(request events.APIGatewayV2HTTPRequest, response events.APIGate
 
 	var metadata = map[string]interface{}{
 		"foo":  "bar",
-		"user": "golangapiuser",
+		"user": "golangapiuserV2",
 		"test": nestedFields,
 	}
 	return metadata
@@ -59,12 +59,12 @@ func shouldSkipOutgoing(request *http.Request, response *http.Response) bool {
 
 // Set Outgoing Event User Id
 func identifyUserOutgoing(request *http.Request, response *http.Response) string {
-	return "golangapiuserOutgoing"
+	return "golangapiuserOutgoingV2"
 }
 
 // Set Outgoing Event Company Id
 func identifyCompanyOutgoing(request *http.Request, response *http.Response) string {
-	return "golangapicompanyOutgoing"
+	return "golangapicompanyOutgoingV2"
 }
 
 // Set Outgoing Event Session Token
@@ -90,7 +90,7 @@ func getMetadataOutgoing(request *http.Request, response *http.Response) map[str
 
 	var metadata = map[string]interface{}{
 		"foo":  "bar",
-		"user": "golangapiuser",
+		"user": "golangapiuserV2",
 		"test": nestedFields,
 	}
 	return metadata

@@ -24,12 +24,15 @@
   version = "v1.0.4"
 
 [[projects]]
-  branch = "master"
-  digest = "1:24b1a0a109e2c14456bf70c4f2d11be2cce76420a8dcf213beb43bfc1c76898d"
+  branch = "refactor-update-version"
+  digest = "1:273253691c07df70d1bf144fbfea963284bf249710c6b4ed7d25b29aca0e8212"
   name = "github.com/moesif/moesif-aws-lambda-go-example"
-  packages = ["moesif_options"]
+  packages = [
+    "moesif_options",
+    "moesif_options_v2",
+  ]
   pruneopts = "UT"
-  revision = "a864e49c78559cc95e6647de6f6da303b6fc82a3"
+  revision = "0933a74f14daa16a1c1db268053572e94b39bb62"
 
 [[projects]]
   digest = "1:9f870f2e8d1ed5690703df16c9608516dba226ecb5c808d58a0db46a6a7b5059"
@@ -61,6 +64,7 @@
     "github.com/aws/aws-lambda-go/lambda",
     "github.com/moesif/moesif-aws-lambda-go",
     "github.com/moesif/moesif-aws-lambda-go-example/moesif_options",
+    "github.com/moesif/moesif-aws-lambda-go-example/moesif_options_v2",
     "github.com/moesif/moesifapi-go/models",
   ]
   solver-name = "gps-cdcl"
