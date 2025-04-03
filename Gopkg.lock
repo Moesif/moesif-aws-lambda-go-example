@@ -16,12 +16,12 @@
   version = "v1.14.0"
 
 [[projects]]
-  digest = "1:c4c782ef0de59b509ae5b68ce9e6b2ef39a13b638d17cc6a2ce5a47db5f4d463"
+  digest = "1:268503cf65dfc56279198367ba26ce1ecb640f9069685ad63e96ace2208c769b"
   name = "github.com/moesif/moesif-aws-lambda-go"
   packages = ["."]
   pruneopts = "UT"
-  revision = "022a26dc4d00a1ef6c06e7b41cd72bc7249a543a"
-  version = "v1.0.3"
+  revision = "60c698932b4c446b909a0a303f40553f2cf3f80a"
+  version = "v1.0.4"
 
 [[projects]]
   branch = "master"
@@ -43,15 +43,15 @@
   version = "v1.0.3"
 
 [[projects]]
-  branch = "master"
-  digest = "1:f8b491a7c25030a895a0e579742d07136e6958e77ef2d46e769db8eec4e58fcd"
+  digest = "1:de19d55ee942ad6f20956ae9cd69d7ab63e6b3fdc517928a5dcff94e0ed8078e"
   name = "golang.org/x/net"
   packages = [
     "context",
     "context/ctxhttp",
   ]
   pruneopts = "UT"
-  revision = "16171245cfb220d5317888b716d69c1fb4e7992b"
+  revision = "e1fcd82abba34df74614020343be8eb1fe85f0d9"
+  version = "v0.38.0"
 
 [solve-meta]
   analyzer-name = "dep"
