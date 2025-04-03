@@ -1,4 +1,4 @@
-package moesif_options
+package moesif_options_v2
 
 import (
 	"net/http"
@@ -14,27 +14,27 @@ func maskEventModel(eventModel models.EventModel) models.EventModel {
 }
 
 // Set User Id
-func identifyUser(request events.APIGatewayProxyRequest, response events.APIGatewayProxyResponse) string {
-	return "golangapiuser"
+func identifyUser(request events.APIGatewayV2HTTPRequest, response events.APIGatewayV2HTTPResponse) string {
+	return "golangapiuserV2"
 }
 
 // Set Company Id
-func identifyCompany(request events.APIGatewayProxyRequest, response events.APIGatewayProxyResponse) string {
-	return "golangapicompany"
+func identifyCompany(request events.APIGatewayV2HTTPRequest, response events.APIGatewayV2HTTPResponse) string {
+	return "golangapicompanyV2"
 }
 
 // Set Session Token
-func getSessionToken(request events.APIGatewayProxyRequest, response events.APIGatewayProxyResponse) string {
+func getSessionToken(request events.APIGatewayV2HTTPRequest, response events.APIGatewayV2HTTPResponse) string {
 	return "XXXXXXXXXXXXXXXX"
 }
 
 // Skip Event
-func shouldSkip(request events.APIGatewayProxyRequest, response events.APIGatewayProxyResponse) bool {
-	return strings.Contains(request.Path, "incoming")
+func shouldSkip(request events.APIGatewayV2HTTPRequest, response events.APIGatewayV2HTTPResponse) bool {
+	return strings.Contains(request.RawPath, "incoming")
 }
 
 // Set Metadata
-func getMetadata(request events.APIGatewayProxyRequest, response events.APIGatewayProxyResponse) map[string]interface{} {
+func getMetadata(request events.APIGatewayV2HTTPRequest, response events.APIGatewayV2HTTPResponse) map[string]interface{} {
 
 	var innerNestedFields = map[string]interface{}{
 		"nestedInner": "test",
@@ -46,7 +46,7 @@ func getMetadata(request events.APIGatewayProxyRequest, response events.APIGatew
 
 	var metadata = map[string]interface{}{
 		"foo":  "bar",
-		"user": "golangapiuser",
+		"user": "golangapiuserV2",
 		"test": nestedFields,
 	}
 	return metadata
@@ -59,12 +59,12 @@ func shouldSkipOutgoing(request *http.Request, response *http.Response) bool {
 
 // Set Outgoing Event User Id
 func identifyUserOutgoing(request *http.Request, response *http.Response) string {
-	return "golangapiuserOutgoing"
+	return "golangapiuserOutgoingV2"
 }
 
 // Set Outgoing Event Company Id
 func identifyCompanyOutgoing(request *http.Request, response *http.Response) string {
-	return "golangapicompanyOutgoing"
+	return "golangapicompanyOutgoingV2"
 }
 
 // Set Outgoing Event Session Token
@@ -90,7 +90,7 @@ func getMetadataOutgoing(request *http.Request, response *http.Response) map[str
 
 	var metadata = map[string]interface{}{
 		"foo":  "bar",
-		"user": "golangapiuser",
+		"user": "golangapiuserV2",
 		"test": nestedFields,
 	}
 	return metadata
@@ -107,7 +107,7 @@ func MoesifOptions() map[string]interface{} {
 		"Mask_Event_Model":           maskEventModel,
 		"Debug":                      true,
 		"Log_Body":                   true,
-		"Log_Body_Outgoing":          false,
+		"Log_Body_Outgoing":          true,
 		"Should_Skip_Outgoing":       shouldSkipOutgoing,
 		"Identify_User_Outgoing":     identifyUserOutgoing,
 		"Identify_Company_Outgoing":  identifyCompanyOutgoing,
